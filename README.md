@@ -460,6 +460,22 @@ APK 만들기
 빌드
 --------------------------------------------------------------------------------------
 
+ - test 
+	- expo 인터페이스 실행
+	    <pre>
+		- npm start 
+	    </pre>
+	    - 인터페이스 실행단계에서 나온 Developer tools running on http://localhost:19002 위 링크를 복사해서 크롬에에 붙여넣기한다.
+
+	- expo Helloworld demo 앱실행
+		- Metro Bundler이용하여 helloworld앱 확인하기
+
+		- IOS
+			- 기본카메라로 왼쪽 하단의 qr코드나, vscode 콘솔창의 qr코드를 찍으면 expo어플을 이용하여 확인할수있다.
+		- 안드로이드
+			- expo어플을 실행 후 Scan Qr Code를 통해 해당 qr코드를 찍으면 앱을 확인할수있다.
+
+
  - build
     - ANDROID
 <pre> - expo build:android</pre>
