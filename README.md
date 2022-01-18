@@ -235,6 +235,7 @@ EXPO 프로젝트 만들기
 	</pre>
 
   - SnS세팅
+  <pre>
     - Google
 	- firebase설정(https://console.firebase.google.com/u/1/?pli=1 이동 및 로그인)
 	- 새프로젝트 만들기
@@ -271,8 +272,8 @@ EXPO 프로젝트 만들기
 				- favicon.png
 				- icon.png
 				- splash.png
-
-			
+	</pre>
+		
 3. webview 
 
 ```javascript
