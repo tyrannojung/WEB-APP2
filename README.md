@@ -224,13 +224,13 @@ EXPO 프로젝트 만들기
 	<pre>
 	    expo fetch:android:hashes
 	</pre>
-
+	<pre>
 	 - Accessing credentials for jongnamlim in project appSystem   
 	 - Google Certificate Fingerprint:     95:EF:06:50:BD:27:6B:D9:82:9B:B2:20:1D:BE:D0:4F:66:02:2E:EE   
 	 - Google Certificate Hash (SHA-1):    95EF0650BD276BD9829BB2201DBED04F66022EEE   
 	 - Google Certificate Hash (SHA-256):  BB4947E0262A9F498B45B1F8B38399741B24B4C2FA2918126BABFF8BD691B933   
 	 - Facebook Key Hash:                  le8GUL0na9mCm7IgHb7QT2YCLu4=   
-
+	</pre>
 
   - SnS세팅
     - Google
