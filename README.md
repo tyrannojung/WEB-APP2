@@ -395,15 +395,15 @@ EXPO 프로젝트 만들기
 ```javascript
     {
      "expo": {
-       "name": "앱만들기",
+       "name": "helloworld0x", // 앱 이름
        "slug": "appSystem",
        "version": "1.0.0",
        "orientation": "portrait",
-       "icon": "./assets/icon.png",
+       "icon": "./assets/icon.png", // 앱 아이콘
        "splash": {
-         "image": "./assets/splash.png",
+         "image": "./assets/splash.png", // 첫 로딩 이미지
          "resizeMode": "contain",
-         "backgroundColor": "#2d2e46"
+         "backgroundColor": "#2d2e46" // 여백 색
        },
        "updates": {
          "fallbackToCacheTimeout": 0
@@ -413,7 +413,7 @@ EXPO 프로젝트 만들기
        ],
        "facebookScheme": "fb351218286764011", // fb + facebook developer app id
        "ios": {
-         "bundleIdentifier": "io.nodehome.education",
+         "bundleIdentifier": "io.nodehome.helloworld0x", //는패키지명(중복x)
          "config": {
            "googleSignIn": {
              "reservedClientId": "com.googleusercontent.apps.107993539890-gcaft094ptl3t7vqs2sta8g0ov4jqthi" //REVERSED_CLIENT_ID ./keys/GoogleService-Info.plist 값 입력
@@ -424,7 +424,7 @@ EXPO 프로젝트 만들기
          "supportsTablet": true
        },
        "android": {
-         "package": "io.nodehome.education",
+         "package": "io.nodehome.helloworld0x", //는패키지명(중복x)
          "googleServicesFile": "./keys/google-services.json", //경로 설정
          "config": {
            "googleSignIn": {
