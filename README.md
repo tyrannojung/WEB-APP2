@@ -210,8 +210,6 @@ EXPO 프로젝트 만들기
   - 위 사항 애러시 yarn install
 
 6. 구글 & 페이스북 로그인(옵션)
-  
-  - 준비단계 : 빌드과정까지 완료된 helloworld프로젝트expo fetch:android:hashes
 
   - 구글 & 페이스북 모듈 install
 	<pre>
@@ -274,7 +272,7 @@ EXPO 프로젝트 만들기
 				- splash.png
 	</pre>
 		
-3. webview 
+  - /src/screens/HOME.js 
 
 ```javascript
     import React, { useEffect } from 'react';
