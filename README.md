@@ -272,7 +272,7 @@ EXPO 프로젝트 만들기
 				- splash.png
 	</pre>
 		
-  - /src/screens/HOME.js 
+  - /src/screens/HOME.js 코드 변경
 
 ```javascript
     import React, { useEffect } from 'react';
@@ -390,7 +390,7 @@ EXPO 프로젝트 만들기
     export default App;
 ```
 
-4. app.json 복사
+ app.json 코드 변경
 
 ```javascript
     {
@@ -444,5 +444,231 @@ EXPO 프로젝트 만들기
 
 
 --------------------------------------------------------------------------------------
+APK 만들기
+--------------------------------------------------------------------------------------
+
+1. APK 만들기
+ - Metro Bundler Cntl + C로 종료시킨다.
+ - helloworld 폴더구조에서 .expo폴더를 지워준다. (.expo에 로그파일이 남아서 충돌한다.)
+ - 사용할 img들을 assets폴더에 넣어준다.
+ 	- favicon 64 x 64 파비콘이미지
+ 	- icon 512 x 512 앱아이콘이미지
+ 	- splash 1242 x 2436 로딩이미지
+	- android 1024x500 배너이미지
+	- adaptive-icon expo실행시이미지 (선택값)
+
+빌드
+--------------------------------------------------------------------------------------
+
+ - build
+    - ANDROID
+<pre> - expo build:android</pre>
+- 빌드과정
+	    - 로그인여부
+		    [x] Log in with an existing Expo account 선택
+
+	    - username dev.4intel@gmail.com
+	    - password abc123ok**
+
+    - apk선택
+	    - [x] apk : 기본적은 apk파일   
+	    - [ ] apk-bundle : apk와 비슷하지만 코드, 리소스, cpu 아키텍처와 메타데이터를 압축한 파일
+	    - apk를 만드는것이므로 apk선택 후 엔터
+
+        - pc : expo사이트 로그인 후 https://expo.dev/accounts/jongnamlim에서 빌드한 프로젝트선택후 Download(.apk)
+        - 핸드폰 : expo에서 로그인 후 빌드한 프로젝트를 선택하고 download 후 설치한후 실행한다. 
+
+    - IOS
+        - Mac북 계정 등록 및 알림허용
+            - Apple ID : hs0chae@naver.com
+	                PW : Jakeen2784
+ 
+	<pre> - expo build:ios	</pre>
+
+    - app형식선택
+    - [x] archive : 실제 배포할수있는 app파일
+    - [ ] simulator : test app파일
+
+    - Do you have access to the Apple account that will be used for submitting this app to the App Store? › (Y/n) App Store에 실제로 등록할껀지여부를 묻는다. Y선택   
+    - How do you want to validate your account? › device / sms 인증서 device/sms어디로 설정할건지 물어본다.   
+    *** Device 선택후 알림으로 오는 code입력    // 맥북필요***
+    - Would you like to use this certificate? Y선택   
+    - Will you provide your own Apple Push Notifications service key? › - Use arrow-keys. Return to submit.   
+     [x]  Let Expo handle the process expo에서 진행
+     [ ]  I want to upload my own file 직접업로드
+
+    - pc : expo사이트 로그인 후 https://expo.dev/accounts/jongnamlim에서 빌드한 프로젝트선택후 Download(.ipa)
+    - 핸드폰 : 다운로드 미지원
+
+    - 다운받은.ipa 단말기로 전송
+    - https://appstoreconnect.apple.com/apps 접속후 +버튼 클릭후 신규 앱 선택
+    - 플랫폼 : IOS 선택
+        - 이름 : abc-helloworld
+        - 기본언어 : 한국어
+        - 번들id : 최근배포한 ios패키지명선택
+        - Sku : helloworld 앱 고유이름
+        - 사용자 액세스 권한 : 전체액세스선택
+    *** 맥북에 Transporter열어서 앱추가 클릭후 .ipa파일 추가 //맥북필요***
+    - 전송이 완료되면 왼쪽 ios에서 빌드된 app에 수출규정준수를 확인한다.
+    - 전송이 완료되면 해당 프로젝트드를 들어가서 상단에 Testflight탭 클릭
+    - 외쪽에 내부 테스팅에 테스트할 계정을 등록한다.
+    - 구글계정에 등록된 메일을 확인하면 testflight어플로 연결된후 다운받으면 단말기에 설치된다.
+
+
+ - 상세내용은 bts-app/Documents/IOS빌드 참조
+
+# 배포
+- Android
+
+ - build (apk를 지원안해서 bundle로 다시 빌드해야된다.)
+ - ANDROID
+ 
+	<pre>
+	- expo build:android		
+	</pre>
+
+
+ - 빌드과정
+	- 로그인여부
+		*[x] Log in with an existing Expo account 선택
+
+	- username dev.4intel@gmail.com
+	- password abc123ok**
+
+ - apk선택
+	- [ ] apk : 기본적은 apk파일
+	- [x] apk-bundle : apk와 비슷하지만 코드, 리소스, cpu 아키텍처와 메타데이터를 압축한 파일
+	- bundle을 만드는 것이므로 bundle선택
+
+- pc : expo사이트 로그인 후 https://expo.dev/accounts/jongnamlim에서 빌드한 프로젝트선택후 Download(.apk)
+- 핸드폰 : expo에서 로그인 후 빌드한 프로젝트를 선택하고 download 후 섪치한후 실행한다. 
+
+  - https://play.google.com/console/developers 접속 및 로그인
+    ID: app.net.4intel@gmail.com
+    PW: 4intel123ok
+
+  - 앱만들기 버튼클릭
+  	- 앱이름 : abc-helloworld
+	- 기본언어 : 한국어 - ko-KR
+	- 앱 또는 게임 : 앱
+	- 유료 또는 무료 : 무료
+	- 선언 : 둘다 동의
+ - 대시보드 : 앱 설정
+	앱설정 > 할일보기
+	- 앱 액세스 권한 : 동의
+	- 광고여부선택 : 아니오
+	- 콘텐츠 등급 : 설문조사 (이메일 : dev.4intel@gmail.com - 문의받을 이메일주소)
+		- 유해성 체크 전부 아니요
+	- 타켓층 및 콘텐츠 : 18세이상
+	- 뉴스앱 : 아니요
+	- 데이터 보안 : 사용자 데이텁수집보안 공유 예 체크
+		- 개인정보 : 이름, 이메일, 주소, 전화번호(각각 세부내용 작성)
+			- 데이터를 수집 또는 공유하나요? : 아니면 수집과 공유를 모두 하나요? 수집됨
+			- 이 데이터는 일시적으로 처리되나요? : 아니오
+			- 이 데이터는 앱에 필수인가요? 아니면 사용자가 수집 여부를 선택할 수 있나요? : 필수입니다.
+			- 이 사용자 데이터가 수집되는 이유는 무엇인가요? 해당하는 항목을 모두 선택해 주세요. : 앱 기능, 계정관리	
+
+	- 개인정보 처리방침 URL: https://www.abc.ne.kr/policy/privacy.html
+
+ - 스토어 설정
+	- 앱 카테고리
+		- 앱 또는 게임 : 앱
+		- 카테고리 : 비즈니스
+	- 스토어 등록적ㅇ보 연락처 세부정보
+		- 이메일주소 : dev.4intel@gmail.com
+		- 전화번호 : + 82 1053454238
+		- 웹사이트 : https://abc.ne.kr
+	- 외부마케팅
+		- 체크해제
+ - 기본스토어 등록정보
+	- 앱 세부정보
+		- 앱이름 : abc-helloworld
+		- 간단한 설명 : abc-helloworld
+		- 자세한 설명 : abc홈페이지입니다.
+	- 그래픽
+		- 앱 아이콘 : icon.png (플레이스토어에 표시되는 앱 아이콘 이미지, 512px*512px )
+		- 그래픽 이미지 : android.png (출시된 앱을 공유했을 때 표시되는 섬네일 이미지 1024px*500px)
+	- 동영상 : https://www.youtube.com/watch?v=SqShHNFpiDQ
+ - 전화
+	- 휴대전화 스크린샷
+		- playstore에 표시될 상세정보이미지 첨부
+ - 태블릿
+	- 7인치 태블릿 스크린샷
+		- playstore에 표시될 상세정보이미지 첨부
+	- 10인치 태블릿 스크린샷
+		- playstore에 표시될 상세정보이미지 첨부
+
+ - 앱출시
+	- 국가 및 지역 선택
+		-전체 선택
+		-국가/지역 동기화
+ - 프로덕션
+	- 국가/지역
+		- 전부체크
+	- 새버전만들기
+		- app Bundle에 .aab파일 업로드
+ 
+- 프로덕션 트랙으로 출시시작 버튼클릭
+
+- IOS
+  - main>나의앱>해당app>ios앱>제출중비중
+
+  - 스토어 소개페이지에 나올 썸네일이미지 등록 (이미지 사이즈에 맞게 등록)   
+  - 6.5형 디스플레이의 경우 1242 픽셀 x 2688 픽셀 (최소3개)   
+  - 5.5형 디스플레이의 경우 1242 픽셀 x 2208 픽셀 (최소3개)   
+  - 12.9형 디스플레이의 경우 2732 픽셀 x 2048 픽셀​ (최소3개)   
+
+
+ - 프로모션 텍스트 : abc홈페이지 (앱 기능 소개)   
+  - 키워드 : 앱스토어 노출 키워드   
+  - 지원 URL : https://abc.ne.kr (앱에대한지원정보)   
+  - 마케팅 URL : https://abc.ne.kr(마케팅페이지url)   
+  - 설명 : abc 홈페이지입니다.(앱의 특징과 설명)   
+  - 빌드 : 앱을 제출하기 전에 빌드를 선택하십시오 버튼클릭(빌드 할 프로젝트 선택)   
+  - 버전: 1.0   
+  - 저작권 : 2022 Abc Inc.  
+  - 라우팅 앱 적용 범위 파일 (활성화할 범위 지정 - 선택사항)   
+
+ - 앱심사정보   
+  - 로그인 정보   
+	- 회원전용 app일시 게스트계정 등록
+		- 사용자 이름 : guest
+		- 암호 : 1234
+  - 연락처 정보   
+	-이름 : 종남
+	-성 : 임
+	-전화번호 : + 82 1053454238
+	-이메일:dev.4intel@gmail.com
+ - 내용 확인 후 저장   
+
+ - main>나의앱>해당app>일반정보 > 앱정보    
+	- 현지화 가능한 정보   
+        - 이름: abc-helloworld (앱 스토어에서 보여질 앱 이름)   
+        - 부제: abc-helloworld (앱 스토어에서 보여지는 앱 이름 바로 하단의 부제)   
+	- 일반 정보   
+        - 번들 ID :  kr.ne.abc.helloworld (이전 화면에서 입력하고 들어왔기 때문에 자동으로 채워져 있다.)   
+        - 카테고리 : 비즈니스( 카테고리를지정해주고 앱 정보 입력 (설정은 자유롭게 수정)   
+        - 콘텐츠 권한 : 동의   
+        - 연령 등급 : 유해한거 없음   
+        - 내용확인 후저장   
+ 
+ - main>나의앱>해당app>일반정보 > 앱이 수집하는 개인정보   
+    - 편집버튼을 누르고    
+    - 개인정보 처리방침 URL: https://www.abc.ne.kr/policy/privacy.html   
+    - 사용자 개인정보 선택 사항 URL:https://www.abc.ne.kr/policy/service.html   
+
+    - 개인정보 데이터 수집 시작하기 활성화(데이터 수집이 필요할시 시작하기 버튼클릭)    
+    - 이앱에서 수집되는 유형 선택   
+    - 이름, 이메일주소, 전화번호, 주소   
+
+ - main>나의앱>해당app>일반정보 > 가격 및 사용 가능 여부  
+    - 가격 :  무료 (앱 스토어에 등록할 가격)   
+    - 내용확인 후저장   
+
+ - main>나의앱>해당app>ios앱>제출중비중   
+	심사를 위해 제출 버튼 클릭   
+
+
+ - 상세내용은 bts-app/Documents/IOS배포 참조   
 
 
