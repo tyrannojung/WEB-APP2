@@ -1,0 +1,515 @@
+/* main */
+@keyframes txt_move {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.sec1 {
+    width: 100%;
+    height: 100vh;
+    
+    position: relative;
+    overflow: hidden;
+}
+.sec1_bg {
+    width: 100%;
+    height: 100%;
+    background: url(/abc/img/prd_banner.jpg) no-repeat center / cover;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+
+    animation: bg_move 15s forwards;
+}
+
+@keyframes bg_move {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.prd_box {
+    width: 800px;
+    height: 650px;
+    padding: 50px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    position: absolute;
+    right: 0;
+    top: 150px;
+
+    transition: 0.5s all;
+}
+
+.top_txt {
+    color: #263238;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 0 30px 15px 0;
+    box-sizing: border-box;
+
+    font-family: 'NEXON Lv2 Gothic';
+    letter-spacing: 3px;
+
+    border-bottom: 3px solid #455A64;
+    opacity: 0;
+    animation: txt_move 1.5s forwards;
+}
+.top_txt span {
+    font-weight: 200;
+    font-size: 22px;
+}
+.ndh_item {
+    overflow: hidden;
+    width: 100%;
+    margin: 40px 0;
+}
+.ndh_item .item {
+    width: calc((100% - 2px) /3);
+    height: 220px;
+    background: #fff;
+    float: left;    
+
+    margin-right: 1px;
+    margin-bottom: 1px;
+
+    text-align: center;
+    padding: 65px 15px;
+    box-sizing: border-box;
+
+    transition: 1s all;
+    opacity: 0;
+    transform: translateY(50px);
+
+    font-family: 'NEXON Lv2 Gothic';
+}
+.item_active {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+.ndh_item .item:nth-child(3n) {
+    margin-right: 0;
+}
+.ndh_item .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ndh_item .name {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+}
+/*  */
+.product_box {
+    margin: 50px 0;
+}
+.product_box > .title {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'NEXON Lv2 Gothic';
+    letter-spacing: 1px;
+}
+.product_box > .title span {
+    font-weight: 200;
+    font-size: 20px;
+}
+.ndh_info_box {
+    margin: 20px 0;
+    overflow: hidden;
+}
+.ndh_info_line {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+
+    display: table;
+}
+.ndh_info_line .left {
+    width: 40%;
+    display: table-cell;
+    vertical-align: middle;
+
+    font-family: 'NEXON Lv2 Gothic';
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 20px;
+}
+.ndh_info_line .right {
+    width: 60%;
+    display: table-cell;
+}
+.ndh_info_line ul {
+    list-style-image:  url( "/abc/img/liststyle.svg" );
+    padding-left: 20px;
+    box-sizing: border-box;
+
+    line-height: 30px;
+    font-size: 16px;
+}
+.ndh_info_box .left_txt {
+    width: 60%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.ndh_info_box .one_txt {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.ndh_info_box .left_txt .title,
+.ndh_info_box .one_txt .title {
+    font-size: 22px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    font-family: 'NEXON Lv2 Gothic';
+    letter-spacing: 1px;
+}
+.ndh_info_box .left_txt ul,
+.ndh_info_box .one_txt ul {
+    list-style-image:  url( "/abc/img/liststyle.svg" );
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.ndh_info_box .left_txt .bot {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 50px;
+    font-family: 'NEXON Lv2 Gothic';
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+.ndh_info_box .right_img {
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+}
+.ndh_info_box .right_img2 {
+    padding: 0;
+}
+.ndh_info_box .right_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.ndh_img_3, .ndh_img_5 {
+    margin: 30px 0 60px;
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ndh_img_data4, .ndh_img_chaindex {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+.ndh_img_chaindex {
+    background: url(/abc/img/chaindex.png) no-repeat center / contain;
+}
+.ndh_img_data4 {
+    background: url(/abc/img/image049.png) no-repeat center / contain;
+}
+.ndh_img_kas {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+
+    margin-top: 30px;
+
+    background: url(/abc/img/image051.png) no-repeat center / contain;
+}
+.ndh_img_vote {
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+
+    background: url(/abc/img/vote.png) no-repeat center / contain;
+}
+.ndh_img_3 img, .ndh_img_5 img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+}
+.ndh_info_box .right_txt {
+
+    width: 30%;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #fffaf1;
+    border: 1px solid #ddd;
+
+    float: left;
+
+    line-height: 26px;
+    font-size: 15px;
+
+}
+.ndh_info_box .right_txt .top {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.common_img {
+    width: 100%;
+    height: 500px;
+}
+.common_img img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+}
+
+.bot_longtxt {
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.bot_longtxt ul {
+    font-size: 16px; 
+    list-style-image:  url( "/abc/img/liststyle.svg" );
+    line-height: 34px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media screen and (max-width: 1160px) {
+    .page_1 {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .prd_box {
+        width: 80%;
+        height: 650px;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 30px;
+    }
+    .top_txt {
+        font-size: 34px;
+        padding: 20px 30px 15px 0;
+    }
+    .top_txt span {
+        font-size: 20px;
+    }
+    .ndh_item .title {
+        font-size: 16px;
+    }
+    .ndh_item .name {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .ndh_info_line .left {
+        font-size: 17px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+    .ndh_info_line ul {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .ndh_info_box .left_txt .title, .ndh_info_box .one_txt .title {
+        font-size: 17px;
+    }
+    .ndh_info_box .left_txt ul, .ndh_info_box .one_txt ul {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .ndh_info_box .left_txt .bot {
+        font-size: 15px;
+    }
+    .ndh_info_box .left_txt, .ndh_info_box .right_img, .ndh_info_box .right_txt {
+        width: 100%;
+    }
+    .ndh_info_box .right_txt {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .ndh_info_box .right_img {
+        height: 500px;
+    }
+    .ndh_info_line {
+        padding: 10px;
+    }
+    .bot_longtxt ul {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .ndh_img_kas {
+        height: 350px;
+    }
+    .product_box > .title {
+        font-size: 26px;
+    }
+    .product_box > .title span {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .top_txt {
+        font-size: 27px;
+    }
+    .top_txt span {
+        font-size: 15px;
+    }
+    .ndh_item {
+        margin: 20px 0;
+    }
+    .ndh_item .item {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+    .sec1 {
+        height: 900px;
+    }
+    .prd_box {
+        width: 90%;
+        padding: 20px;
+        height: 730px;
+        top: 100px;
+    }
+    .ndh_info_box .one_txt {
+        padding: 0;
+    }
+    .ndh_info_line .left, .ndh_info_line .right {
+        width: 100%;
+        display: block;
+    }
+    .ndh_info_line .right {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .bot_longtxt ul {
+        text-align: left;
+    }
+    .ndh_img_3 {
+        height: 300px;
+        margin: 0;
+        padding: 0;
+    }
+    .ndh_img_chaindex {
+        background: url(/abc/img/chaindex2.png) no-repeat center / contain;
+    }
+    .common_img {
+        height: 360px;
+        margin-bottom: 30px;
+    }
+    .ndh_img_data4 {
+        background: url(/abc/img/image049-2.png) no-repeat center / contain;
+    }
+    .ndh_img_data4 {
+        height: 400px;
+    }
+    .ndh_img_kas {
+        background: url(/abc/img/image051-2.png) no-repeat center / contain;
+        height: 500px;
+    }
+    .ndh_img_vote {    
+        background: url(/abc/img/vote-2.png) no-repeat center / contain;
+        height: 500px;
+    }
+    .ndh_info_box {
+        margin: 20px 10px;
+    }
+    .ndh_img_3, .ndh_img_5 {
+        margin: 0;
+        height: 300px;
+        padding: 0;
+    }
+    .product_box > .title {
+        font-size: 24px;
+    }
+    .ndh_info_box .left_txt {
+        padding: 0;
+    }
+    .ndh_info_line {
+        padding: 0;
+    }
+    .abc_bot {
+        padding: 80px 20px 80px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ndh_info_line ul {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .ndh_info_box .left_txt ul, .ndh_info_box .one_txt ul {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .ndh_info_box .left_txt .title, .ndh_info_box .one_txt .title {
+        line-height: 26px;
+    }
+    .ndh_info_box .right_txt {
+        font-size: 14px;
+    }
+    .ndh_info_box .right_txt .top {
+        font-size: 16px;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    .ndh_info_box .right_img {
+        height: 300px;
+    }
+    .common_img {
+        height: 290px;
+    }
+    .ndh_img_3, .ndh_img_5 {
+        height: 220px;
+    }
+    .ndh_img_data4 {
+        height: 280px;
+        margin: 0;
+    }
+    .ndh_img_vote {
+        margin: 0;
+    }
+
+    .top_txt {
+        font-size: 24px;
+        width: 100%;
+        padding: 10px 0;
+        font-family: 'NEXON Lv2 Gothic Bold';
+    }
+    .product_box > .title {
+        font-family: 'NEXON Lv2 Gothic Bold';
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .product_box > .title span {
+        font-size: 16px;
+        font-family: 'NEXON Lv2 Gothic';
+    }
+    .bot_longtxt ul {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

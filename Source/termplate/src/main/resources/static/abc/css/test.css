@@ -1,0 +1,112 @@
+
+.box_bot {
+    width: 100%;
+    padding: 15px 40px;
+    box-sizing: border-box;
+}
+.join_txt {
+    font-size: 14px;
+    font-weight: 600;
+}
+.box_bot input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    outline: none;
+
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: #fff;
+    background: #ff3f3f;
+    display: block;
+    transition: all 0.3s;
+}
+
+.social-link:hover, .social-link:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.social-link .icon {
+    width: 4rem;
+    text-align: center;
+    margin-right: 1.5rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.social-google-plus {
+    background: #dd4b39;
+}
+
+.social-google-plus:hover, .social-google-plus:focus {
+    background: #c23321;
+}
+.social-link-gradient.social-google-plus {
+    background: linear-gradient(to right, #dd4b39, #ec9a90);
+}
+
+.social-facebook {
+    background: #3b5998;
+}
+
+.social-facebook:hover, .social-facebook:focus {
+    background: #2d4373;
+}
+
+.social-link-gradient.social-facebook {
+    background: linear-gradient(to right, #3b5998, #718dc8);
+}
+
+.social-kakao{
+    background: #F7E600;
+}
+
+.social-kakao:hover, .social-kakao:focus {
+    background: #ECC301;
+}
+
+.social-link-gradient.social-kakao {
+    background: linear-gradient(to right, #F7E600, #FAF4A5);
+}
+
+.social-naver{
+    background: #04C259;
+}
+
+.social-naver:hover, .social-naver:focus {
+    background: #53AA47;
+}
+
+.social-link-gradient.social-naver {
+    background: linear-gradient(to right, #04C259, #53AA47);
+}
+
+.social-apple{
+    background: #000000;
+}
+
+.social-apple:hover, .social-apple:focus {
+    background: #323131;
+}
+
+.social-link-gradient.social-apple {
+    background: linear-gradient(to right, #04C259, #53AA47);
+}
+
+.social-iamport{
+    background: #5D51E6;
+}
+
+.social-iamport:hover, .social-iamport:focus {
+    background: #5042E5;
+}
+
+.social-link-gradient.social-iamport {
+    background: linear-gradient(to right, #5D51E6, #5D51E6);
+}
