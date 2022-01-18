@@ -480,7 +480,7 @@ APK 만들기
 		    [x] Log in with an existing Expo account 선택
 
 	    - username dev.4intel@gmail.com
-	    - password abc123ok**
+	    - password 
 
     - apk선택
 	    - [x] apk : 기본적은 apk파일   
