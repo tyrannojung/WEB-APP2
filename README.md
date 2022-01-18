@@ -194,7 +194,7 @@ EXPO 프로젝트 만들기
 		- expo init helloworld
 	</pre>
 
-4. 템플릿 선택
+5. 템플릿 선택
  - [x] blank - 간단합 앱을 만들 수 있는 빈 템플릿
  - [ ] blank(TypeScript)  - 타입스크립트로 구성될수있는 빈 템플릿
  - [ ] tabs(TypeScript) - react-navigation 및 type스크립트를 사용하는 몇가지 예제화면 및 탭
@@ -204,12 +204,12 @@ EXPO 프로젝트 만들기
 	    - blank 선택
 	 </pre>
 
-5. Helloworld프로젝트 폴더구조를 /source/default와 동일하게 맞춰준다.
+6. Helloworld프로젝트 폴더구조를 /source/default와 동일하게 맞춰준다.
   - keys, assets, src, theme, App.js, app.json, package.json 붙여넣기
   - node_moudles를 지우고 npm install
   - 위 사항 애러시 yarn install
 
-6. 구글 & 페이스북 로그인(옵션)
+7. 구글 & 페이스북 로그인(옵션)
 
   - 구글 & 페이스북 모듈 install
 	<pre>
