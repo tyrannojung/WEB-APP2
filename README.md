@@ -225,7 +225,7 @@ EXPO 프로젝트 만들기
 	    expo fetch:android:hashes
 	</pre>
 	
-	
+	결과값
 	<pre>
 	 - Accessing credentials for jongnamlim in project appSystem   
 	 - Google Certificate Fingerprint:     95:EF:06:50:BD:27:6B:D9:82:9B:B2:20:1D:BE:D0:4F:66:02:2E:EE   
