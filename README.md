@@ -592,29 +592,7 @@ WebSNS (Kakao & Naver & Ios & Google & Facebook) Api 적용
     }
 ```
 
-   /kr/ne/abc/template/common/sns/ 패키지에서 필요한 java를 복사 붙여넣기 한다.
-   
-   apple
-    	- AppleController.java
-	- AppleLoginUtil.java
-   kakao
-   	- KakaoController.java
-	- KakaoLoginUtil.java
-   naver
-   	- NaverController.java
-	- NaverLoginApi.java
-	- NaverLoginUtil.java
 
-
-   
-	
-    - kakao
-	
-	
-    - naver
-    	
-	
-    - ios
     	
 	
     
